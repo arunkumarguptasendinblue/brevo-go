@@ -10955,6 +10955,15 @@ definitions:
           type: "integer"
           example: 10
           description: "utm id"
+        utmId:
+          type: "string"
+          example: "promo_042"
+          description: "The utm_id value applied to the campaign's tracking links,\
+            \ returned verbatim as a string. Falls back to your account's global UTM\
+            \ settings when no custom value was set on the campaign. Only returned\
+            \ when UTM tracking is enabled on the campaign and a value is set at one\
+            \ of these levels. Preferred field for new consumers — covers both numeric\
+            \ IDs and customer-supplied non-numeric strings."
         testSent:
           type: "boolean"
           example: true
@@ -12874,6 +12883,25 @@ definitions:
         description: "Customize the utm_campaign value. If this field is empty, the\
           \ campaign name will be used. Only alphanumeric characters and spaces are\
           \ allowed"
+      utmSource:
+        type: "string"
+        example: "brevo"
+        description: "Customize the utm_source value. When omitted or empty, the utm_source\
+          \ entry from the account's global utm_settings is used if set; otherwise\
+          \ the account default (`brevo` or `sendinblue`) is used."
+      utmMedium:
+        type: "string"
+        example: "email"
+        description: "Customize the utm_medium value. When omitted or empty, the utm_medium\
+          \ entry from the account's global utm_settings is used if set; otherwise\
+          \ the default `email` is used."
+      utmId:
+        type: "string"
+        example: "promo_042"
+        description: "Customize the utm_id value. Appears on outgoing tracking links\
+          \ alongside utm_campaign. When omitted or empty, the utm_id entry from the\
+          \ account's global utm_settings is used if enabled; otherwise no utm_id\
+          \ parameter is emitted."
       params:
         type: "object"
         example:
@@ -13076,6 +13104,25 @@ definitions:
         description: "Customize the utm_campaign value. If this field is empty, the\
           \ campaign name will be used. Only alphanumeric characters and spaces are\
           \ allowed"
+      utmSource:
+        type: "string"
+        example: "brevo"
+        description: "Customize the utm_source value. When omitted or empty, the utm_source\
+          \ entry from the account's global utm_settings is used if set; otherwise\
+          \ the account default (`brevo` or `sendinblue`) is used."
+      utmMedium:
+        type: "string"
+        example: "email"
+        description: "Customize the utm_medium value. When omitted or empty, the utm_medium\
+          \ entry from the account's global utm_settings is used if set; otherwise\
+          \ the default `email` is used."
+      utmId:
+        type: "string"
+        example: "promo_042"
+        description: "Customize the utm_id value. Appears on outgoing tracking links\
+          \ alongside utm_campaign. When omitted or empty, the utm_id entry from the\
+          \ account's global utm_settings is used if enabled; otherwise no utm_id\
+          \ parameter is emitted."
       params:
         type: "object"
         example:
