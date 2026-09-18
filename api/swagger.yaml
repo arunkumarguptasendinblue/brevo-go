@@ -10942,19 +10942,34 @@ definitions:
         utmCampaignValue:
           type: "string"
           example: "myutm"
-          description: "utm parameter associated with campaign"
+          description: "The utm_campaign value applied to the campaign's tracking\
+            \ links. Falls back to your account's global UTM settings when no custom\
+            \ value was set on the campaign, or the campaign name if neither is configured.\
+            \ Only returned when UTM tracking is enabled on the campaign."
         utmSource:
           type: "string"
           example: "Brevo"
-          description: "source of utm parameter"
+          description: "The utm_source value applied to the campaign's tracking links.\
+            \ Falls back to your account's global UTM settings when no custom value\
+            \ was set on the campaign, or the account default (`brevo` or `sendinblue`)\
+            \ if neither is configured. Case is preserved verbatim. Only returned\
+            \ when UTM tracking is enabled on the campaign."
         utmMedium:
           type: "string"
           example: "EMAIL"
-          description: "medium parameter"
+          description: "The utm_medium value applied to the campaign's tracking links.\
+            \ Falls back to your account's global UTM settings when no custom value\
+            \ was set on the campaign, or the default `email` if neither is configured.\
+            \ Case is preserved verbatim. Only returned when UTM tracking is enabled\
+            \ on the campaign."
         utmID:
           type: "integer"
           example: 10
-          description: "utm id"
+          description: "Legacy numeric utm_id value applied to the campaign's tracking\
+            \ links. Present only when UTM tracking is enabled on the campaign and\
+            \ the resolved utm_id is numeric (typically the campaign's ID). For customer-supplied\
+            \ non-numeric values (for example `promo_042`), read UtmId (string) instead.\
+            \ Kept for backward compatibility."
         utmId:
           type: "string"
           example: "promo_042"
