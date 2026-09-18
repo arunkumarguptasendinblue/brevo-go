@@ -47,6 +47,8 @@ type GetExtendedCampaignOverview struct {
 	UtmMedium string `json:"utmMedium,omitempty"`
 	// utm id
 	UtmID int32 `json:"utmID,omitempty"`
+	// The utm_id value applied to the campaign's tracking links, returned verbatim as a string. Falls back to your account's global UTM settings when no custom value was set on the campaign. Only returned when UTM tracking is enabled on the campaign and a value is set at one of these levels. Preferred field for new consumers — covers both numeric IDs and customer-supplied non-numeric strings.
+	UtmId string `json:"utmId,omitempty"`
 	// Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
 	TestSent bool `json:"testSent"`
 	// Header of the campaign
