@@ -39,13 +39,13 @@ type GetEmailCampaign struct {
 	WinnerDelay int32 `json:"winnerDelay,omitempty"`
 	// It is true if you have chosen to send your campaign at best time, otherwise it is false
 	SendAtBestTime bool `json:"sendAtBestTime,omitempty"`
-	// utm parameter associated with campaign
+	// The utm_campaign value applied to the campaign's tracking links. Falls back to your account's global UTM settings when no custom value was set on the campaign, or the campaign name if neither is configured. Only returned when UTM tracking is enabled on the campaign.
 	UtmCampaignValue string `json:"utmCampaignValue,omitempty"`
-	// source of utm parameter
+	// The utm_source value applied to the campaign's tracking links. Falls back to your account's global UTM settings when no custom value was set on the campaign, or the account default (`brevo` or `sendinblue`) if neither is configured. Case is preserved verbatim. Only returned when UTM tracking is enabled on the campaign.
 	UtmSource string `json:"utmSource,omitempty"`
-	// medium parameter
+	// The utm_medium value applied to the campaign's tracking links. Falls back to your account's global UTM settings when no custom value was set on the campaign, or the default `email` if neither is configured. Case is preserved verbatim. Only returned when UTM tracking is enabled on the campaign.
 	UtmMedium string `json:"utmMedium,omitempty"`
-	// utm id
+	// Legacy numeric utm_id value applied to the campaign's tracking links. Present only when UTM tracking is enabled on the campaign and the resolved utm_id is numeric (typically the campaign's ID). For customer-supplied non-numeric values (for example `promo_042`), read the string utmId field instead. Kept for backward compatibility.
 	UtmID int32 `json:"utmID,omitempty"`
 	// Retrieved the status of test email sending. (true=Test email has been sent  false=Test email has not been sent)
 	TestSent bool `json:"testSent"`
